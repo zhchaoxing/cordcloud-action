@@ -21,7 +21,7 @@ try:
     email = core.get_input('email', required=True)
     passwd = core.get_input('passwd', required=True)
     secret = core.get_input('secret')
-    host = core.get_input('host') or 'cordcloud.us,cordcloud.one,cordcloud.biz,c-cloud.xyz'
+    host = core.get_input('host') or 'cordcloud.us,cordcloud.one,cordcloud.biz,c-cloud.xyz,cordc.net'
     code = pyotp.TOTP(secret).now() if secret else ''
 
     # host 预处理：切分、过滤空值
